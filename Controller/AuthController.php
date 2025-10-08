@@ -160,6 +160,9 @@ try {
     // Ensure we always return JSON
     header('Content-Type: application/json');
     
+    // Prevent any output before JSON response
+    ob_start();
+    
     $controller = new AuthController();
     $action = $_GET['action'] ?? '';
     
@@ -177,6 +180,8 @@ try {
             throw new Exception('Invalid action');
     }
 } catch (Exception $e) {
+    // Clear any output buffer
+    ob_clean();
     http_response_code(400);
     echo json_encode([
         'success' => false,
@@ -184,6 +189,8 @@ try {
     ]);
     exit;
 } catch (Error $e) {
+    // Clear any output buffer
+    ob_clean();
     http_response_code(500);
     echo json_encode([
         'success' => false,

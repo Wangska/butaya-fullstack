@@ -2,17 +2,18 @@
 declare(strict_types=1);
 
 // Database Configuration
-define('DB_HOST', 'localhost');
-define('DB_NAME', 'bill_splitter');
-define('DB_USER', 'root');
-define('DB_PASS', '');
+// Use environment variables for deployment, fallback to local values
+define('DB_HOST', $_ENV['DB_HOST'] ?? 'localhost');
+define('DB_NAME', $_ENV['DB_NAME'] ?? 'bill_splitter');
+define('DB_USER', $_ENV['DB_USER'] ?? 'root');
+define('DB_PASS', $_ENV['DB_PASS'] ?? '');
 define('DB_CHARSET', 'utf8mb4');
 
 // Application Configuration
-define('ENVIRONMENT', 'development'); // Set to 'production' for production
+define('ENVIRONMENT', $_ENV['APP_ENV'] ?? 'development');
 define('APP_NAME', 'Bill Splitter');
 define('APP_VERSION', '1.0.0');
-define('APP_URL', 'http://localhost/BS');
+define('APP_URL', $_ENV['APP_URL'] ?? 'http://localhost/BS');
 
 // Security Configuration
 define('PASSWORD_MIN_LENGTH', 8);

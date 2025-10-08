@@ -28,7 +28,9 @@ class Database {
             // Initialize database tables if they don't exist
             $this->initializeDatabase();
         } catch (PDOException $e) {
-            throw new Exception("Database connection failed: " . $e->getMessage());
+            // Log the error for debugging
+            error_log("Database connection failed: " . $e->getMessage());
+            throw new Exception("Database connection failed. Please check your configuration.");
         }
     }
     
