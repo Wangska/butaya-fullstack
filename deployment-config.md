@@ -6,10 +6,11 @@ Set these environment variables in your Coolify deployment:
 
 ### Database Configuration
 ```
-DB_HOST=your-database-host
-DB_NAME=your-database-name
-DB_USER=your-database-user
-DB_PASS=your-database-password
+DB_HOST=e80wkg8s4swkw0wk04gkg8kk
+DB_DATABASE=default
+DB_USERNAME=root
+DB_PASSWORD=cJjC1bSifKxwe47R9kb38xPc3abxBptCzGkzOrgKmfLGq1ekcvP4rZoSJJGwMInF
+DB_PORT=3306
 ```
 
 ### Application Configuration

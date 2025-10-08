@@ -4,9 +4,9 @@ declare(strict_types=1);
 // Database Configuration
 // Use environment variables for deployment, fallback to local values
 define('DB_HOST', $_ENV['DB_HOST'] ?? 'localhost');
-define('DB_NAME', $_ENV['DB_NAME'] ?? 'bill_splitter');
-define('DB_USER', $_ENV['DB_USER'] ?? 'root');
-define('DB_PASS', $_ENV['DB_PASS'] ?? '');
+define('DB_NAME', $_ENV['DB_DATABASE'] ?? 'bill_splitter');
+define('DB_USER', $_ENV['DB_USERNAME'] ?? 'root');
+define('DB_PASS', $_ENV['DB_PASSWORD'] ?? '');
 define('DB_CHARSET', 'utf8mb4');
 
 // Application Configuration

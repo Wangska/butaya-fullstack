@@ -27,7 +27,9 @@ try {
         'status' => 'healthy',
         'database' => 'connected',
         'timestamp' => date('Y-m-d H:i:s'),
-        'environment' => ENVIRONMENT
+        'environment' => ENVIRONMENT,
+        'db_host' => DB_HOST,
+        'db_name' => DB_NAME
     ]);
     
 } catch (Exception $e) {
