@@ -3,74 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Account</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Sign In - BillSplit</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../Public/CSS/login.css">
 </head>
 <body>
-    <div class="container">
-        <div class="logo">
-            <img src="../Public/Images/back-logo.png" alt="Company Logo">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-receipt"></i>
+                <span>BillSplit</span>
+            </div>
+            <div class="nav-links">
+                <a href="../index.php">Home</a>
+                <a href="register.html">Sign Up</a>
+            </div>
         </div>
+    </nav>
 
-        <div class="form-container">
-            <!-- Login Form -->
-            <div class="form" id="loginFormContainer">
-                <h2>Welcome Back</h2>
-                <div class="message" id="loginMessage"></div>
-                <form id="loginForm">
-                    <div class="input-group">
-                        <input type="text" id="loginEmail" name="login" required>
-                        <label for="loginEmail"><i class="fas fa-user"></i> Email or Username</label>
+    <div class="login-container">
+        <div class="login-card">
+            <!-- Left Side - Branding -->
+            <div class="login-branding">
+                <div class="branding-content">
+                    <div class="brand-logo">
+                        <i class="fas fa-receipt"></i>
+                        <h1>BillSplit</h1>
                     </div>
-                    <div class="input-group">
-                        <input type="password" id="loginPassword" name="password" required>
-                        <label for="loginPassword"><i class="fas fa-lock"></i> Password</label>
-                        <i class="fas fa-eye-slash toggle-password" data-input="loginPassword"></i>
+                    <h2>Welcome Back!</h2>
+                    <p>Sign in to continue managing your shared expenses and bills with friends and family.</p>
+                    <div class="brand-features">
+                        <div class="feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Secure & Private</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Mobile Friendly</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-users"></i>
+                            <span>Group Management</span>
+                        </div>
                     </div>
-                    <div class="forgot-password">
-                        <a href="forgot_password.html">Forgot Password?</a>
-                    </div>
-                    <button type="submit">Log In</button>
-                </form>
-                
-                <div class="divider">Or</div>
-                
-                <div style="text-align: center; margin: 20px 0;">
-                    <button type="button" onclick="location.href='register.html'" style="background: var(--white); color: var(--primary); border: 1px solid var(--primary);">
-                        Create New Account
-                    </button>
                 </div>
-                
-                <p class="form-footer">Continue without account? <a href="#" id="showGuestForm">Guest Access</a></p>
             </div>
 
-            <!-- Guest Form -->
-            <div class="form hidden" id="guestFormContainer">
-                <h2>Guest Access</h2>
-                <div class="message" id="guestMessage"></div>
-                <form id="guestForm">
-                    <div class="input-group">
-                        <input type="text" id="guestFirstName" name="first_name" required>
-                        <label for="guestFirstName"><i class="fas fa-user"></i> First Name</label>
+            <!-- Right Side - Forms -->
+            <div class="login-forms">
+                <!-- Login Form -->
+                <div class="form-container" id="loginFormContainer">
+                    <div class="form-header">
+                        <h3>Sign In</h3>
+                        <p>Enter your credentials to access your account</p>
                     </div>
-                    <div class="input-group">
-                        <input type="text" id="guestLastName" name="last_name" required>
-                        <label for="guestLastName"><i class="fas fa-user"></i> Last Name</label>
+                    
+                    <div class="message" id="loginMessage"></div>
+                    
+                    <form id="loginForm" class="auth-form">
+                        <div class="input-group">
+                            <div class="input-wrapper">
+                                <i class="fas fa-user input-icon"></i>
+                                <input type="text" id="loginEmail" name="login" placeholder="Email or Username" required>
+                            </div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <div class="input-wrapper">
+                                <i class="fas fa-lock input-icon"></i>
+                                <input type="password" id="loginPassword" name="password" placeholder="Password" required>
+                                <i class="fas fa-eye-slash toggle-password" data-input="loginPassword"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="form-options">
+                            <label class="checkbox-wrapper">
+                                <input type="checkbox" id="rememberMe">
+                                <span class="checkmark"></span>
+                                Remember me
+                            </label>
+                            <a href="#" class="forgot-link">Forgot Password?</a>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary">
+                            <i class="fas fa-sign-in-alt"></i>
+                            Sign In
+                        </button>
+                    </form>
+                    
+                    <div class="divider">
+                        <span>or</span>
                     </div>
-                    <div class="input-group">
-                        <input type="email" id="guestEmail" name="email" required>
-                        <label for="guestEmail"><i class="fas fa-envelope"></i> Email</label>
+                    
+                    <div class="alternative-actions">
+                        <button type="button" class="btn-secondary" onclick="location.href='register.html'">
+                            <i class="fas fa-user-plus"></i>
+                            Create New Account
+                        </button>
+                        
+                        <button type="button" class="btn-guest" id="showGuestForm">
+                            <i class="fas fa-user-friends"></i>
+                            Continue as Guest
+                        </button>
                     </div>
-                    <div class="input-group">
-                        <input type="text" id="guestBillCode" name="bill_code" required>
-                        <label for="guestBillCode"><i class="fa-solid fa-key"></i> Bill Code</label>
+                </div>
+
+                <!-- Guest Form -->
+                <div class="form-container hidden" id="guestFormContainer">
+                    <div class="form-header">
+                        <h3>Guest Access</h3>
+                        <p>Join a group without creating an account</p>
                     </div>
-                    <button type="submit">Continue</button>
-                </form>
-                
-                <p class="form-footer">Already registered? <a href="#" id="showLoginForm">Log In Here</a></p>
+                    
+                    <div class="message" id="guestMessage"></div>
+                    
+                    <form id="guestForm" class="auth-form">
+                        <div class="input-group">
+                            <div class="input-wrapper">
+                                <i class="fas fa-user input-icon"></i>
+                                <input type="text" id="guestFirstName" name="first_name" placeholder="First Name" required>
+                            </div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <div class="input-wrapper">
+                                <i class="fas fa-user input-icon"></i>
+                                <input type="text" id="guestLastName" name="last_name" placeholder="Last Name" required>
+                            </div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <div class="input-wrapper">
+                                <i class="fas fa-envelope input-icon"></i>
+                                <input type="email" id="guestEmail" name="email" placeholder="Email Address" required>
+                            </div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <div class="input-wrapper">
+                                <i class="fas fa-key input-icon"></i>
+                                <input type="text" id="guestBillCode" name="bill_code" placeholder="Group Code" required>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary">
+                            <i class="fas fa-arrow-right"></i>
+                            Join Group
+                        </button>
+                    </form>
+                    
+                    <div class="divider">
+                        <span>or</span>
+                    </div>
+                    
+                    <div class="alternative-actions">
+                        <button type="button" class="btn-secondary" id="showLoginForm">
+                            <i class="fas fa-sign-in-alt"></i>
+                            Sign In Instead
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
