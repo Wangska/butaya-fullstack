@@ -3,55 +3,216 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register Account</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Create Account - BillSplit</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../Public/CSS/register.css">
 </head>
 <body>
-    <div class="container">
-        <div class="logo">
-            <img src="../Public/Images/back-logo.png" alt="Company Logo">
-        </div>
+    <!-- Background Elements -->
+    <div class="background-elements">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+    </div>
 
-        <div class="form-container">
-            <div class="form" id="registerFormContainer">
-                <h2>Register</h2>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-icon">
+                    <i class="fas fa-calculator"></i>
+                </div>
+                <span>BillSplit</span>
+            </div>
+            <div class="nav-links">
+                <a href="../index.php" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    Home
+                </a>
+                <a href="login.html" class="nav-link">
+                    <i class="fas fa-sign-in-alt"></i>
+                    Sign In
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="register-container">
+        <div class="register-card">
+            <!-- Left Side - Visual -->
+            <div class="register-visual">
+                <div class="visual-content">
+                    <div class="welcome-text">
+                        <h1>Join BillSplit Today!</h1>
+                        <p>Create your account and start splitting bills with friends and family in minutes.</p>
+                    </div>
+                    
+                    <div class="benefits">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <div class="benefit-text">
+                                <h3>Get Started in 2 Minutes</h3>
+                                <p>Quick setup and you're ready to go</p>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="benefit-text">
+                                <h3>100% Secure</h3>
+                                <p>Bank-level encryption for your data</p>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="benefit-text">
+                                <h3>Unlimited Groups</h3>
+                                <p>Create as many expense groups as you need</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"BillSplit has made managing shared expenses so much easier. No more awkward conversations about money!"</p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="author-info">
+                                    <div class="author-name">Sarah Johnson</div>
+                                    <div class="author-title">Happy User</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side - Form -->
+            <div class="register-form">
+                <div class="form-header">
+                    <div class="form-logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <span>BillSplit</span>
+                    </div>
+                    <h2>Create Your Account</h2>
+                    <p>Fill in your details to get started</p>
+                </div>
+                
                 <div class="message" id="registerMessage"></div>
-                <form id="registerForm">
-                    <div class="input-group">
-                        <input type="text" id="registerFirstName" name="first_name" required>
-                        <label for="registerFirstName"><i class="fas fa-user"></i> First Name</label>
+                
+                <form id="registerForm" class="auth-form">
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label for="registerFirstName">First Name</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-user input-icon"></i>
+                                <input type="text" id="registerFirstName" name="first_name" placeholder="Enter your first name" required>
+                            </div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="registerLastName">Last Name</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-user input-icon"></i>
+                                <input type="text" id="registerLastName" name="last_name" placeholder="Enter your last name" required>
+                            </div>
+                        </div>
                     </div>
+                    
                     <div class="input-group">
-                        <input type="text" id="registerLastName" name="last_name" required>
-                        <label for="registerLastName"><i class="fas fa-user"></i> Last Name</label>
+                        <label for="registerNickname">Nickname</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-file-signature input-icon"></i>
+                            <input type="text" id="registerNickname" name="nickname" placeholder="Choose a unique nickname" required>
+                        </div>
+                        <small class="input-help">This will be visible to your group members</small>
                     </div>
+                    
                     <div class="input-group">
-                        <input type="text" id="registerNickname" name="nickname" required>
-                        <label for="registerNickname"><i class="fa-solid fa-file-signature"></i> Nickname (must be unique)</label>
+                        <label for="registerEmail">Email Address</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-envelope input-icon"></i>
+                            <input type="email" id="registerEmail" name="email" placeholder="Enter your email address" required>
+                        </div>
                     </div>
+                    
                     <div class="input-group">
-                        <input type="email" id="registerEmail" name="email" required>
-                        <label for="registerEmail"><i class="fas fa-envelope"></i> Email</label>
+                        <label for="registerUsername">Username</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-user-tag input-icon"></i>
+                            <input type="text" id="registerUsername" name="username" placeholder="Choose a unique username" required>
+                        </div>
+                        <small class="input-help">Must be unique across all users</small>
                     </div>
+                    
                     <div class="input-group">
-                        <input type="text" id="registerUsername" name="username" required>
-                        <label for="registerUsername"><i class="fas fa-user-tag"></i> Username (must be unique)</label>
+                        <label for="registerPassword">Password</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-lock input-icon"></i>
+                            <input type="password" id="registerPassword" name="password" placeholder="Create a strong password" required>
+                            <i class="fas fa-eye-slash toggle-password" data-input="registerPassword"></i>
+                        </div>
+                        <div class="password-strength">
+                            <div class="strength-bar">
+                                <div class="strength-fill"></div>
+                            </div>
+                            <span class="strength-text">Password strength</span>
+                        </div>
                     </div>
+                    
                     <div class="input-group">
-                        <input type="password" id="registerPassword" name="password" required>
-                        <label for="registerPassword"><i class="fas fa-lock"></i> Password</label>
-                        <i class="fas fa-eye-slash toggle-password" data-input="registerPassword"></i>
+                        <label for="registerConfirmPassword">Confirm Password</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-lock input-icon"></i>
+                            <input type="password" id="registerConfirmPassword" placeholder="Confirm your password" required>
+                            <i class="fas fa-eye-slash toggle-password" data-input="registerConfirmPassword"></i>
+                        </div>
                     </div>
-                    <div class="input-group">
-                        <input type="password" id="registerConfirmPassword" required>
-                        <label for="registerConfirmPassword"><i class="fas fa-lock"></i> Confirm Password</label>
-                        <i class="fas fa-eye-slash toggle-password" data-input="registerConfirmPassword"></i>
+                    
+                    <div class="form-options">
+                        <label class="checkbox-wrapper">
+                            <input type="checkbox" id="agreeTerms" required>
+                            <span class="checkmark"></span>
+                            I agree to the <a href="#" class="terms-link">Terms of Service</a> and <a href="#" class="terms-link">Privacy Policy</a>
+                        </label>
                     </div>
-                    <button type="submit">Register</button>
+                    
+                    <button type="submit" class="btn-primary">
+                        <i class="fas fa-user-plus"></i>
+                        Create Account
+                    </button>
                 </form>
-                <p class="form-footer">Already have an account? <a href="../View/login.html">Login</a></p>
+                
+                <div class="divider">
+                    <span>or continue with</span>
+                </div>
+                
+                <div class="social-login">
+                    <button type="button" class="social-btn google">
+                        <i class="fab fa-google"></i>
+                        Google
+                    </button>
+                    <button type="button" class="social-btn facebook">
+                        <i class="fab fa-facebook-f"></i>
+                        Facebook
+                    </button>
+                </div>
+                
+                <div class="form-footer">
+                    <p>Already have an account? <a href="login.html" class="login-link">Sign In</a></p>
+                </div>
             </div>
         </div>
     </div>

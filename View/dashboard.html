@@ -3,116 +3,258 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bill Splitter Dashboard</title>
+  <title>BillSplit Dashboard</title>
   <link rel="stylesheet" href="../Public/CSS/dashboard.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="dashboard">
+    <!-- Background Elements -->
+    <div class="background-elements">
+      <div class="gradient-orb orb-1"></div>
+      <div class="gradient-orb orb-2"></div>
+      <div class="gradient-orb orb-3"></div>
+    </div>
+
     <!-- Header Section -->
     <header class="dashboard-header">
-      <div class="logo">
-        <i class="fas fa-receipt"></i>
-        <h1>BillSplit</h1>
+      <div class="header-left">
+        <div class="logo">
+          <div class="logo-icon">
+            <i class="fas fa-calculator"></i>
+          </div>
+          <span>BillSplit</span>
+        </div>
+        <div class="breadcrumb">
+          <span class="breadcrumb-item">Dashboard</span>
+          <i class="fas fa-chevron-right"></i>
+          <span class="breadcrumb-item active" id="current-group-breadcrumb">Select Group</span>
+        </div>
       </div>
-      <div class="user-controls">
+      <div class="header-right">
+        <div class="search-container">
+          <i class="fas fa-search"></i>
+          <input type="text" placeholder="Search expenses, groups..." class="search-input">
+        </div>
         <div class="notifications">
           <i class="fas fa-bell"></i>
           <span class="badge">3</span>
         </div>
         <div class="user-profile">
           <img src="https://i.pravatar.cc/40" alt="User" class="profile-pic">
-          <span>You</span>
+          <div class="user-info">
+            <span class="user-name">John Doe</span>
+            <span class="user-role">Admin</span>
+          </div>
+          <i class="fas fa-chevron-down"></i>
         </div>
       </div>
     </header>
 
     <!-- Main Content Area -->
     <div class="dashboard-content">
-      <!-- Left Sidebar - Groups -->
-      <aside class="groups-sidebar">
-        <div class="sidebar-header">
-          <h3>Groups</h3>
-          <button id="new-group-btn" class="icon-btn" aria-label="Create new group">
-            <i class="fas fa-plus"></i>
-          </button>
-        </div>
-        <div class="search-box">
-          <i class="fas fa-search"></i>
-          <input type="text" placeholder="Search groups...">
-        </div>
-        <ul class="group-list" id="group-list">
-          <!-- Groups will be dynamically inserted here -->
-        </ul>
-      </aside>
-
-      <!-- Main Panel - Group Details -->
-      <main class="group-details">
-        <div class="group-header" id="group-header">
-          <h2 id="current-group-name">Select a group</h2>
-          <div class="group-actions">
-            <button id="add-expense-btn" class="btn primary">
-              <i class="fas fa-plus"></i> Add Expense
-            </button>
-            <button id="settle-up-btn" class="btn secondary" disabled>
-              <i class="fas fa-hand-holding-usd"></i> Settle Up
-            </button>
-            <button id="group-settings-btn" class="icon-btn" aria-label="Group settings">
-              <i class="fas fa-cog"></i>
-            </button>
-          </div>
-        </div>
-
-        <!-- Balance Summary -->
-        <div class="balance-summary" id="balance-summary">
-          <div class="total-balance">
-            <h3>Your Balance</h3>
-            <p class="balance-amount neutral">₱0.00</p>
-          </div>
-          <div class="simplified-balances">
-            <h3>Simplified Balances</h3>
-            <ul class="balances-list" id="balances-list">
-              <li class="empty-state">Select a group to see balances</li>
+      <!-- Left Sidebar - Navigation -->
+      <aside class="sidebar">
+        <nav class="sidebar-nav">
+          <div class="nav-section">
+            <h4>Overview</h4>
+            <ul class="nav-list">
+              <li class="nav-item active">
+                <i class="fas fa-home"></i>
+                <span>Dashboard</span>
+              </li>
+              <li class="nav-item">
+                <i class="fas fa-chart-pie"></i>
+                <span>Analytics</span>
+              </li>
+              <li class="nav-item">
+                <i class="fas fa-receipt"></i>
+                <span>All Expenses</span>
+              </li>
             </ul>
           </div>
+          
+          <div class="nav-section">
+            <h4>Groups</h4>
+            <div class="section-header">
+              <span>My Groups</span>
+              <button id="new-group-btn" class="icon-btn" aria-label="Create new group">
+                <i class="fas fa-plus"></i>
+              </button>
+            </div>
+            <ul class="group-list" id="group-list">
+              <!-- Groups will be dynamically inserted here -->
+            </ul>
+          </div>
+          
+          <div class="nav-section">
+            <h4>Settings</h4>
+            <ul class="nav-list">
+              <li class="nav-item">
+                <i class="fas fa-cog"></i>
+                <span>Preferences</span>
+              </li>
+              <li class="nav-item">
+                <i class="fas fa-user"></i>
+                <span>Profile</span>
+              </li>
+              <li class="nav-item">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Logout</span>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </aside>
+
+      <!-- Main Panel -->
+      <main class="main-content">
+        <!-- Welcome Section -->
+        <div class="welcome-section">
+          <div class="welcome-content">
+            <h1>Welcome back, John!</h1>
+            <p>Here's what's happening with your expenses today.</p>
+          </div>
+          <div class="quick-actions">
+            <button id="add-expense-btn" class="btn-primary">
+              <i class="fas fa-plus"></i>
+              Add Expense
+            </button>
+            <button id="settle-up-btn" class="btn-secondary" disabled>
+              <i class="fas fa-hand-holding-usd"></i>
+              Settle Up
+            </button>
+          </div>
         </div>
 
-        <!-- Recent Activity -->
-        <div class="recent-activity">
-          <div class="section-header">
-            <h3>Recent Activity</h3>
-            <div class="activity-filters">
-              <button class="filter-btn active">All</button>
-              <button class="filter-btn">Expenses</button>
-              <button class="filter-btn">Payments</button>
+        <!-- Stats Cards -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-wallet"></i>
+            </div>
+            <div class="stat-content">
+              <h3>Total Balance</h3>
+              <p class="stat-value" id="total-balance">₱0.00</p>
+              <span class="stat-change positive">+₱127.50 this month</span>
             </div>
           </div>
-          <ul class="activity-list" id="activity-list">
-            <li class="empty-state">No activity yet. Add an expense to get started!</li>
-          </ul>
-        </div>
-      </main>
-
-      <!-- Right Sidebar - Group Members -->
-      <aside class="members-sidebar">
-        <div class="sidebar-header">
-          <h3>Members</h3>
-          <button id="add-member-btn" class="icon-btn" disabled aria-label="Add member">
-            <i class="fas fa-plus"></i>
-          </button>
-        </div>
-        <ul class="member-list" id="member-list">
-          <li class="empty-state">Select a group to see members</li>
-        </ul>
-        
-        <!-- Expense Summary Chart -->
-        <div class="expense-summary">
-          <h3>Expense Summary</h3>
-          <div class="chart-container">
-            <canvas id="expense-chart"></canvas>
+          
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <div class="stat-content">
+              <h3>Active Groups</h3>
+              <p class="stat-value">3</p>
+              <span class="stat-change">2 new this week</span>
+            </div>
+          </div>
+          
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-receipt"></i>
+            </div>
+            <div class="stat-content">
+              <h3>This Month</h3>
+              <p class="stat-value">₱2,450.00</p>
+              <span class="stat-change">12 expenses</span>
+            </div>
+          </div>
+          
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="stat-content">
+              <h3>Savings</h3>
+              <p class="stat-value">₱340.00</p>
+              <span class="stat-change positive">+15% from last month</span>
+            </div>
           </div>
         </div>
-      </aside>
+
+        <!-- Main Content Grid -->
+        <div class="content-grid">
+          <!-- Recent Activity -->
+          <div class="content-card">
+            <div class="card-header">
+              <h3>Recent Activity</h3>
+              <div class="card-actions">
+                <div class="activity-filters">
+                  <button class="filter-btn active">All</button>
+                  <button class="filter-btn">Expenses</button>
+                  <button class="filter-btn">Payments</button>
+                </div>
+                <button class="icon-btn">
+                  <i class="fas fa-ellipsis-h"></i>
+                </button>
+              </div>
+            </div>
+            <div class="card-content">
+              <ul class="activity-list" id="activity-list">
+                <li class="empty-state">No activity yet. Add an expense to get started!</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Group Details -->
+          <div class="content-card">
+            <div class="card-header">
+              <h3 id="current-group-name">Select a Group</h3>
+              <div class="card-actions">
+                <button id="group-settings-btn" class="icon-btn" aria-label="Group settings">
+                  <i class="fas fa-cog"></i>
+                </button>
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="group-details" id="group-details">
+                <div class="empty-state">
+                  <i class="fas fa-users"></i>
+                  <h4>No Group Selected</h4>
+                  <p>Choose a group from the sidebar to view details and manage expenses.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Members & Balances -->
+          <div class="content-card">
+            <div class="card-header">
+              <h3>Group Members</h3>
+              <div class="card-actions">
+                <button id="add-member-btn" class="icon-btn" disabled aria-label="Add member">
+                  <i class="fas fa-plus"></i>
+                </button>
+              </div>
+            </div>
+            <div class="card-content">
+              <ul class="member-list" id="member-list">
+                <li class="empty-state">Select a group to see members</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Expense Summary -->
+          <div class="content-card">
+            <div class="card-header">
+              <h3>Expense Summary</h3>
+              <div class="card-actions">
+                <button class="icon-btn">
+                  <i class="fas fa-download"></i>
+                </button>
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="chart-container">
+                <canvas id="expense-chart"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
     </div>
   </div>
 
