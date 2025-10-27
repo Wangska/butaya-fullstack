@@ -6,205 +6,299 @@
   <title>BillSplit Dashboard</title>
   <link rel="stylesheet" href="../Public/CSS/dashboard.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="dashboard">
-    <!-- Background Elements -->
-    <div class="background-elements">
-      <div class="gradient-orb orb-1"></div>
-      <div class="gradient-orb orb-2"></div>
-      <div class="gradient-orb orb-3"></div>
+    <!-- Animated Background -->
+    <div class="background-animation">
+      <div class="floating-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+        <div class="shape shape-5"></div>
+        <div class="shape shape-6"></div>
+      </div>
+      <div class="gradient-mesh">
+        <div class="mesh-gradient mesh-1"></div>
+        <div class="mesh-gradient mesh-2"></div>
+        <div class="mesh-gradient mesh-3"></div>
+      </div>
     </div>
 
-    <!-- Header Section -->
-    <header class="dashboard-header">
-      <div class="header-left">
-        <div class="logo">
-          <div class="logo-icon">
+    <!-- Top Navigation Bar -->
+    <nav class="top-nav">
+      <div class="nav-container">
+        <div class="nav-brand">
+          <div class="brand-icon">
             <i class="fas fa-calculator"></i>
           </div>
-          <span>BillSplit</span>
+          <span class="brand-text">BillSplit</span>
         </div>
-        <div class="breadcrumb">
-          <span class="breadcrumb-item">Dashboard</span>
-          <i class="fas fa-chevron-right"></i>
-          <span class="breadcrumb-item active" id="current-group-breadcrumb">Select Group</span>
-        </div>
-      </div>
-      <div class="header-right">
-        <div class="search-container">
-          <i class="fas fa-search"></i>
-          <input type="text" placeholder="Search expenses, groups..." class="search-input">
-        </div>
-        <div class="notifications">
-          <i class="fas fa-bell"></i>
-          <span class="badge">3</span>
-        </div>
-        <div class="user-profile">
-          <img src="https://i.pravatar.cc/40" alt="User" class="profile-pic">
-          <div class="user-info">
-            <span class="user-name">John Doe</span>
-            <span class="user-role">Admin</span>
+        
+        <div class="nav-center">
+          <div class="search-wrapper">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" placeholder="Search expenses, groups, or members..." class="search-input">
+            <div class="search-suggestions"></div>
           </div>
-          <i class="fas fa-chevron-down"></i>
         </div>
-      </div>
-    </header>
-
-    <!-- Main Content Area -->
-    <div class="dashboard-content">
-      <!-- Left Sidebar - Navigation -->
-      <aside class="sidebar">
-        <nav class="sidebar-nav">
-          <div class="nav-section">
-            <h4>Overview</h4>
-            <ul class="nav-list">
-              <li class="nav-item active">
-                <i class="fas fa-home"></i>
-                <span>Dashboard</span>
-              </li>
-              <li class="nav-item">
-                <i class="fas fa-chart-pie"></i>
-                <span>Analytics</span>
-              </li>
-              <li class="nav-item">
-                <i class="fas fa-receipt"></i>
-                <span>All Expenses</span>
-              </li>
-            </ul>
-          </div>
+        
+        <div class="nav-actions">
+          <button class="nav-btn notification-btn">
+            <i class="fas fa-bell"></i>
+            <span class="notification-badge">3</span>
+          </button>
           
-          <div class="nav-section">
-            <h4>Groups</h4>
-            <div class="section-header">
-              <span>My Groups</span>
-              <button id="new-group-btn" class="icon-btn" aria-label="Create new group">
-                <i class="fas fa-plus"></i>
-              </button>
-            </div>
-            <ul class="group-list" id="group-list">
-              <!-- Groups will be dynamically inserted here -->
-            </ul>
-          </div>
-          
-          <div class="nav-section">
-            <h4>Settings</h4>
-            <ul class="nav-list">
-              <li class="nav-item">
-                <i class="fas fa-cog"></i>
-                <span>Preferences</span>
-              </li>
-              <li class="nav-item">
+          <div class="user-menu">
+            <button class="user-avatar">
+              <img src="https://i.pravatar.cc/40" alt="User" class="avatar-img">
+              <div class="user-status"></div>
+            </button>
+            <div class="user-dropdown">
+              <div class="user-info">
+                <div class="user-name">John Doe</div>
+                <div class="user-email">john@example.com</div>
+              </div>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item">
                 <i class="fas fa-user"></i>
-                <span>Profile</span>
-              </li>
-              <li class="nav-item">
+                Profile
+              </a>
+              <a href="#" class="dropdown-item">
+                <i class="fas fa-cog"></i>
+                Settings
+              </a>
+              <a href="#" class="dropdown-item">
                 <i class="fas fa-sign-out-alt"></i>
-                <span>Logout</span>
-              </li>
-            </ul>
+                Logout
+              </a>
+            </div>
           </div>
-        </nav>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Layout -->
+    <div class="main-layout">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="sidebar-content">
+          <!-- Quick Stats -->
+          <div class="quick-stats">
+            <div class="stat-item">
+              <div class="stat-icon">
+                <i class="fas fa-wallet"></i>
+              </div>
+              <div class="stat-content">
+                <div class="stat-value" id="total-balance">₱0.00</div>
+                <div class="stat-label">Total Balance</div>
+              </div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-icon">
+                <i class="fas fa-users"></i>
+              </div>
+              <div class="stat-content">
+                <div class="stat-value">3</div>
+                <div class="stat-label">Active Groups</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Navigation Menu -->
+          <nav class="sidebar-nav">
+            <div class="nav-section">
+              <h4 class="nav-section-title">Overview</h4>
+              <ul class="nav-list">
+                <li class="nav-item active">
+                  <a href="#" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="fas fa-chart-pie"></i>
+                    <span>Analytics</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="fas fa-receipt"></i>
+                    <span>All Expenses</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="nav-section">
+              <div class="nav-section-header">
+                <h4 class="nav-section-title">Groups</h4>
+                <button id="new-group-btn" class="add-btn" title="Create new group">
+                  <i class="fas fa-plus"></i>
+                </button>
+              </div>
+              <ul class="group-list" id="group-list">
+                <!-- Groups will be dynamically inserted here -->
+              </ul>
+            </div>
+            
+            <div class="nav-section">
+              <h4 class="nav-section-title">Settings</h4>
+              <ul class="nav-list">
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="fas fa-cog"></i>
+                    <span>Preferences</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="fas fa-user"></i>
+                    <span>Profile</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
       </aside>
 
-      <!-- Main Panel -->
+      <!-- Main Content -->
       <main class="main-content">
-        <!-- Welcome Section -->
-        <div class="welcome-section">
+        <!-- Welcome Header -->
+        <div class="welcome-header">
           <div class="welcome-content">
-            <h1>Welcome back, John!</h1>
-            <p>Here's what's happening with your expenses today.</p>
+            <h1 class="welcome-title">Welcome back, John!</h1>
+            <p class="welcome-subtitle">Here's what's happening with your expenses today.</p>
           </div>
-          <div class="quick-actions">
-            <button id="add-expense-btn" class="btn-primary">
+          <div class="welcome-actions">
+            <button id="add-expense-btn" class="btn btn-primary">
               <i class="fas fa-plus"></i>
               Add Expense
             </button>
-            <button id="settle-up-btn" class="btn-secondary" disabled>
+            <button id="settle-up-btn" class="btn btn-secondary" disabled>
               <i class="fas fa-hand-holding-usd"></i>
               Settle Up
             </button>
           </div>
         </div>
 
-        <!-- Stats Cards -->
-        <div class="stats-grid">
+        <!-- Stats Overview -->
+        <div class="stats-overview">
           <div class="stat-card">
-            <div class="stat-icon">
-              <i class="fas fa-wallet"></i>
+            <div class="stat-card-header">
+              <div class="stat-icon">
+                <i class="fas fa-wallet"></i>
+              </div>
+              <div class="stat-trend positive">
+                <i class="fas fa-arrow-up"></i>
+                <span>+12.5%</span>
+              </div>
             </div>
-            <div class="stat-content">
-              <h3>Total Balance</h3>
-              <p class="stat-value" id="total-balance">₱0.00</p>
-              <span class="stat-change positive">+₱127.50 this month</span>
+            <div class="stat-card-content">
+              <div class="stat-value">₱2,450.00</div>
+              <div class="stat-label">This Month</div>
+              <div class="stat-description">12 expenses recorded</div>
             </div>
           </div>
           
           <div class="stat-card">
-            <div class="stat-icon">
-              <i class="fas fa-users"></i>
+            <div class="stat-card-header">
+              <div class="stat-icon">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <div class="stat-trend positive">
+                <i class="fas fa-arrow-up"></i>
+                <span>+15%</span>
+              </div>
             </div>
-            <div class="stat-content">
-              <h3>Active Groups</h3>
-              <p class="stat-value">3</p>
-              <span class="stat-change">2 new this week</span>
-            </div>
-          </div>
-          
-          <div class="stat-card">
-            <div class="stat-icon">
-              <i class="fas fa-receipt"></i>
-            </div>
-            <div class="stat-content">
-              <h3>This Month</h3>
-              <p class="stat-value">₱2,450.00</p>
-              <span class="stat-change">12 expenses</span>
+            <div class="stat-card-content">
+              <div class="stat-value">₱340.00</div>
+              <div class="stat-label">Savings</div>
+              <div class="stat-description">From last month</div>
             </div>
           </div>
           
           <div class="stat-card">
-            <div class="stat-icon">
-              <i class="fas fa-chart-line"></i>
+            <div class="stat-card-header">
+              <div class="stat-icon">
+                <i class="fas fa-users"></i>
+              </div>
+              <div class="stat-trend neutral">
+                <i class="fas fa-minus"></i>
+                <span>0%</span>
+              </div>
             </div>
-            <div class="stat-content">
-              <h3>Savings</h3>
-              <p class="stat-value">₱340.00</p>
-              <span class="stat-change positive">+15% from last month</span>
+            <div class="stat-card-content">
+              <div class="stat-value">3</div>
+              <div class="stat-label">Active Groups</div>
+              <div class="stat-description">2 new this week</div>
+            </div>
+          </div>
+          
+          <div class="stat-card">
+            <div class="stat-card-header">
+              <div class="stat-icon">
+                <i class="fas fa-receipt"></i>
+              </div>
+              <div class="stat-trend negative">
+                <i class="fas fa-arrow-down"></i>
+                <span>-5%</span>
+              </div>
+            </div>
+            <div class="stat-card-content">
+              <div class="stat-value">₱127.50</div>
+              <div class="stat-label">Pending</div>
+              <div class="stat-description">Awaiting payment</div>
             </div>
           </div>
         </div>
 
-        <!-- Main Content Grid -->
+        <!-- Content Grid -->
         <div class="content-grid">
           <!-- Recent Activity -->
           <div class="content-card">
             <div class="card-header">
-              <h3>Recent Activity</h3>
+              <div class="card-title">
+                <h3>Recent Activity</h3>
+                <div class="card-subtitle">Latest transactions and updates</div>
+              </div>
               <div class="card-actions">
-                <div class="activity-filters">
-                  <button class="filter-btn active">All</button>
-                  <button class="filter-btn">Expenses</button>
-                  <button class="filter-btn">Payments</button>
+                <div class="filter-tabs">
+                  <button class="filter-tab active">All</button>
+                  <button class="filter-tab">Expenses</button>
+                  <button class="filter-tab">Payments</button>
                 </div>
-                <button class="icon-btn">
+                <button class="card-action-btn">
                   <i class="fas fa-ellipsis-h"></i>
                 </button>
               </div>
             </div>
             <div class="card-content">
-              <ul class="activity-list" id="activity-list">
-                <li class="empty-state">No activity yet. Add an expense to get started!</li>
-              </ul>
+              <div class="activity-list" id="activity-list">
+                <div class="empty-state">
+                  <div class="empty-icon">
+                    <i class="fas fa-receipt"></i>
+                  </div>
+                  <h4>No activity yet</h4>
+                  <p>Add an expense to get started!</p>
+                </div>
+              </div>
             </div>
           </div>
 
           <!-- Group Details -->
           <div class="content-card">
             <div class="card-header">
-              <h3 id="current-group-name">Select a Group</h3>
+              <div class="card-title">
+                <h3 id="current-group-name">Select a Group</h3>
+                <div class="card-subtitle">Choose a group to view details</div>
+              </div>
               <div class="card-actions">
-                <button id="group-settings-btn" class="icon-btn" aria-label="Group settings">
+                <button id="group-settings-btn" class="card-action-btn" title="Group settings">
                   <i class="fas fa-cog"></i>
                 </button>
               </div>
@@ -212,7 +306,9 @@
             <div class="card-content">
               <div class="group-details" id="group-details">
                 <div class="empty-state">
-                  <i class="fas fa-users"></i>
+                  <div class="empty-icon">
+                    <i class="fas fa-users"></i>
+                  </div>
                   <h4>No Group Selected</h4>
                   <p>Choose a group from the sidebar to view details and manage expenses.</p>
                 </div>
@@ -220,29 +316,41 @@
             </div>
           </div>
 
-          <!-- Members & Balances -->
+          <!-- Group Members -->
           <div class="content-card">
             <div class="card-header">
-              <h3>Group Members</h3>
+              <div class="card-title">
+                <h3>Group Members</h3>
+                <div class="card-subtitle">People in your selected group</div>
+              </div>
               <div class="card-actions">
-                <button id="add-member-btn" class="icon-btn" disabled aria-label="Add member">
+                <button id="add-member-btn" class="card-action-btn" disabled title="Add member">
                   <i class="fas fa-plus"></i>
                 </button>
               </div>
             </div>
             <div class="card-content">
-              <ul class="member-list" id="member-list">
-                <li class="empty-state">Select a group to see members</li>
-              </ul>
+              <div class="member-list" id="member-list">
+                <div class="empty-state">
+                  <div class="empty-icon">
+                    <i class="fas fa-user-plus"></i>
+                  </div>
+                  <h4>Select a Group</h4>
+                  <p>Choose a group to see its members</p>
+                </div>
+              </div>
             </div>
           </div>
 
           <!-- Expense Summary -->
           <div class="content-card">
             <div class="card-header">
-              <h3>Expense Summary</h3>
+              <div class="card-title">
+                <h3>Expense Summary</h3>
+                <div class="card-subtitle">Visual breakdown of expenses</div>
+              </div>
               <div class="card-actions">
-                <button class="icon-btn">
+                <button class="card-action-btn" title="Download report">
                   <i class="fas fa-download"></i>
                 </button>
               </div>
@@ -260,82 +368,109 @@
 
   <!-- Modals -->
   <div class="modal" id="new-group-modal">
+    <div class="modal-backdrop"></div>
     <div class="modal-content">
-      <span class="close-btn" aria-label="Close modal">&times;</span>
-      <h2>Create New Group</h2>
-      <form id="new-group-form">
-        <div class="form-group">
-          <label for="group-name">Group Name</label>
-          <input type="text" id="group-name" required>
-        </div>
-        <div class="form-group">
-          <label for="group-currency">Currency</label>
-          <select id="group-currency" required>
-            <option value="PHP">PHP (₱)</option>
-            <option value="USD">USD ($)</option>
-            <option value="EUR">EUR (€)</option>
-            <option value="GBP">GBP (£)</option>
-            <option value="INR">INR (₹)</option>
-          </select>
-        </div>
-        <button type="submit" class="btn primary">Create Group</button>
-      </form>
+      <div class="modal-header">
+        <h2>Create New Group</h2>
+        <button class="modal-close">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="new-group-form">
+          <div class="form-group">
+            <label for="group-name">Group Name</label>
+            <input type="text" id="group-name" placeholder="Enter group name" required>
+          </div>
+          <div class="form-group">
+            <label for="group-currency">Currency</label>
+            <select id="group-currency" required>
+              <option value="PHP">PHP (₱)</option>
+              <option value="USD">USD ($)</option>
+              <option value="EUR">EUR (€)</option>
+              <option value="GBP">GBP (£)</option>
+              <option value="INR">INR (₹)</option>
+            </select>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary modal-cancel">Cancel</button>
+        <button type="submit" form="new-group-form" class="btn btn-primary">Create Group</button>
+      </div>
     </div>
   </div>
 
   <div class="modal" id="expense-modal">
+    <div class="modal-backdrop"></div>
     <div class="modal-content">
-      <span class="close-btn" aria-label="Close modal">&times;</span>
-      <h2>Add New Expense</h2>
-      <form id="expense-form">
-        <div class="form-group">
-          <label for="expense-description">Description</label>
-          <input type="text" id="expense-description" placeholder="What was it for?" required>
-        </div>
-        <div class="form-group">
-          <label for="expense-amount">Amount</label>
-          <input type="number" id="expense-amount" min="0.01" step="0.01" required>
-        </div>
-        <div class="form-group">
-          <label for="expense-payer">Paid by</label>
-          <select id="expense-payer" required>
-            <!-- Options will be populated dynamically -->
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="expense-category">Category</label>
-          <select id="expense-category" required>
-            <option value="food">🍕 Food</option>
-            <option value="transport">🚗 Transport</option>
-            <option value="shopping">🛍️ Shopping</option>
-            <option value="housing">🏠 Housing</option>
-            <option value="entertainment">🎬 Entertainment</option>
-            <option value="other">❓ Other</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="expense-date">Date</label>
-          <input type="date" id="expense-date" required>
-        </div>
-        <div class="form-group">
-          <label>Split Between</label>
-          <div class="split-options">
-            <div class="split-method">
-              <button type="button" class="split-method-btn active" data-method="equal">Equal</button>
-              <button type="button" class="split-method-btn" data-method="percentage">Percentage</button>
-              <button type="button" class="split-method-btn" data-method="custom">Custom</button>
+      <div class="modal-header">
+        <h2>Add New Expense</h2>
+        <button class="modal-close">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="expense-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="expense-description">Description</label>
+              <input type="text" id="expense-description" placeholder="What was it for?" required>
             </div>
-            <div class="split-details" id="split-details">
-              <!-- Split details will appear here -->
+            <div class="form-group">
+              <label for="expense-amount">Amount</label>
+              <input type="number" id="expense-amount" min="0.01" step="0.01" placeholder="0.00" required>
             </div>
           </div>
-        </div>
-        <button type="submit" class="btn primary">Add Expense</button>
-      </form>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="expense-payer">Paid by</label>
+              <select id="expense-payer" required>
+                <!-- Options will be populated dynamically -->
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="expense-category">Category</label>
+              <select id="expense-category" required>
+                <option value="food">🍕 Food</option>
+                <option value="transport">🚗 Transport</option>
+                <option value="shopping">🛍️ Shopping</option>
+                <option value="housing">🏠 Housing</option>
+                <option value="entertainment">🎬 Entertainment</option>
+                <option value="other">❓ Other</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="expense-date">Date</label>
+            <input type="date" id="expense-date" required>
+          </div>
+          
+          <div class="form-group">
+            <label>Split Between</label>
+            <div class="split-options">
+              <div class="split-method">
+                <button type="button" class="split-method-btn active" data-method="equal">Equal</button>
+                <button type="button" class="split-method-btn" data-method="percentage">Percentage</button>
+                <button type="button" class="split-method-btn" data-method="custom">Custom</button>
+              </div>
+              <div class="split-details" id="split-details">
+                <!-- Split details will appear here -->
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary modal-cancel">Cancel</button>
+        <button type="submit" form="expense-form" class="btn btn-primary">Add Expense</button>
+      </div>
     </div>
   </div>
 
-  <!-- Toast Notification Container -->
+  <!-- Toast Container -->
   <div id="toast-container" class="toast-container"></div>
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
