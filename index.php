@@ -41,44 +41,6 @@
             <div class="gradient-orb orb-3"></div>
         </div>
         <div class="hero-container">
-            <div class="hero-content">
-                <div class="hero-badge">
-                    <i class="fas fa-shield-alt"></i>
-                    <span>Trusted by 10,000+ users worldwide</span>
-                </div>
-                <h1 class="hero-title">
-                    Split Bills <span class="gradient-text">Smartly</span>
-                    <br>With Your Squad
-                </h1>
-                <p class="hero-description">
-                    Split smarter, stay closer. BillSplit makes sharing expenses effortless,
-                    transparent, and fair—so you can focus on the moments, not the math.
-                </p>
-                <div class="hero-actions">
-                    <a href="View/register.html" class="btn-primary">
-                        <i class="fas fa-rocket"></i>
-                        Start Free Trial
-                    </a>
-                    <a href="View/login.html" class="btn-secondary">
-                        <i class="fas fa-play"></i>
-                        Watch Demo
-                    </a>
-                </div>
-                <div class="hero-stats">
-                    <div class="stat">
-                        <span class="stat-number">50K+</span>
-                        <span class="stat-label">Bills Split</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">10K+</span>
-                        <span class="stat-label">Happy Users</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">99%</span>
-                        <span class="stat-label">Accuracy</span>
-                    </div>
-                </div>
-            </div>
             <div class="hero-visual">
                 <div class="phone-mockup">
                     <div class="phone-screen">
@@ -130,6 +92,44 @@
                     <div class="floating-card card-3">
                         <i class="fas fa-mobile-alt"></i>
                         <span>Mobile</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Trusted by 10,000+ users worldwide</span>
+                </div>
+                <h1 class="hero-title">
+                    Settle Shared Expenses
+                    <br><span class="gradient-text">Fast. Fair. Together.</span>
+                </h1>
+                <p class="hero-description">
+                    Split smarter, stay closer. BillSplit makes sharing expenses effortless,
+                    transparent, and fair—so you can focus on the moments, not the math.
+                </p>
+                <div class="hero-actions">
+                    <a href="View/register.html" class="btn-primary">
+                        <i class="fas fa-rocket"></i>
+                        Start Free Trial
+                    </a>
+                    <a href="View/login.html" class="btn-secondary">
+                        <i class="fas fa-play"></i>
+                        Watch Demo
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">50K+</span>
+                        <span class="stat-label">Bills Split</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">10K+</span>
+                        <span class="stat-label">Happy Users</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">99%</span>
+                        <span class="stat-label">Accuracy</span>
                     </div>
                 </div>
             </div>
