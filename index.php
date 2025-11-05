@@ -51,8 +51,8 @@
                     <br>With Your Squad
                 </h1>
                 <p class="hero-description">
-                    The ultimate expense splitting platform. Track shared costs, 
-                    settle debts instantly, and keep your friendships intact.
+                    Split smarter, stay closer. BillSplit makes sharing expenses effortless,
+                    transparent, and fair—so you can focus on the moments, not the math.
                 </p>
                 <div class="hero-actions">
                     <a href="View/register.html" class="btn-primary">

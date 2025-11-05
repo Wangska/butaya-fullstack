@@ -1,16 +1,16 @@
 @import url('default-css.css');
 
-/* Light theme overrides to ensure readable inputs/text */
+/* Dark theme overrides */
 :root {
-  --bg-primary: #f8fafc;
-  --bg-card: #ffffff;
-  --bg-card-hover: #f8fafc;
-  --text-primary: #0f172a;
-  --text-secondary: #334155;
-  --text-muted: #6b7280;
-  --border: rgba(2, 6, 23, 0.08);
-  --border-hover: rgba(2, 6, 23, 0.18);
-  --primary: #2563eb;
+  --bg-primary: #0b0b12;
+  --bg-card: #131327;
+  --bg-card-hover: #171738;
+  --text-primary: #f3f4f6;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --border: rgba(148, 163, 184, 0.16);
+  --border-hover: rgba(148, 163, 184, 0.28);
+  --primary: #8b5cf6;
 }
 
 /* Dashboard Layout - warm violet, compact sidebar, outlined cards */
@@ -124,7 +124,7 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  background: #ffffff;
+  background: #0f0f1a;
   border-bottom: 1px solid var(--border);
   padding: var(--space-4) 0;
 }
@@ -151,7 +151,7 @@
 .brand-icon {
   width: 40px;
   height: 40px;
-  background: rgba(37, 99, 235, 0.1);
+  background: rgba(139, 92, 246, 0.15);
   border-radius: var(--radius-lg);
   border: 1px solid var(--border);
   display: flex;
@@ -184,7 +184,7 @@
 .search-input {
   width: 100%;
   padding: var(--space-3) var(--space-4) var(--space-3) var(--space-10);
-  background: #ffffff;
+  background: #131327;
   border: 1px solid var(--border);
   border-radius: var(--radius-full);
   color: var(--text-primary);
@@ -195,8 +195,8 @@
 .search-input:focus {
   outline: none;
   border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
-  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.16);
+  background: #171738;
 }
 
 .search-input::placeholder {
@@ -355,7 +355,7 @@
 /* Sidebar */
 .sidebar {
   width: 220px;
-  background: #ffffff;
+  background: #0f0f1a;
   border-right: 1px solid var(--border);
   padding: var(--space-5) 0;
   overflow-y: auto;
@@ -391,7 +391,7 @@
   align-items: center;
   gap: var(--space-4);
   padding: var(--space-4);
-  background: #ffffff;
+  background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-xl);
   transition: box-shadow var(--transition-normal);
@@ -548,7 +548,7 @@
   align-items: center;
   justify-content: space-between;
   padding: var(--space-3) var(--space-4);
-  background: #ffffff;
+  background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   cursor: pointer;
@@ -594,7 +594,7 @@
   align-items: center;
   margin-bottom: var(--space-8);
   padding: var(--space-6);
-  background: #ffffff;
+  background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-2xl);
 }
@@ -670,8 +670,8 @@
 }
 
 .btn-secondary {
-  background: #ffffff;
-  color: var(--text-primary);
+  background: var(--bg-card);
+  color: var(--text-secondary);
   border: 1px solid var(--border);
 }
 
@@ -696,7 +696,7 @@
 }
 
 .stat-card {
-  background: #ffffff;
+  background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-2xl);
   padding: var(--space-6);
@@ -802,7 +802,7 @@
 }
 
 .content-card {
-  background: #ffffff;
+  background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-2xl);
   overflow: hidden;
@@ -1065,7 +1065,7 @@
 .form-group select {
   width: 100%;
   padding: var(--space-3) var(--space-4);
-  background: #ffffff;
+  background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   color: var(--text-primary);
@@ -1077,8 +1077,8 @@
 .form-group select:focus {
   outline: none;
   border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
-  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.16);
+  background: var(--bg-card-hover);
 }
 
 .form-group input::placeholder {
