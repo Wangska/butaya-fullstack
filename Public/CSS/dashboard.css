@@ -1,5 +1,18 @@
 @import url('default-css.css');
 
+/* Light theme overrides to ensure readable inputs/text */
+:root {
+  --bg-primary: #f8fafc;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f8fafc;
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #6b7280;
+  --border: rgba(2, 6, 23, 0.08);
+  --border-hover: rgba(2, 6, 23, 0.18);
+  --primary: #2563eb;
+}
+
 /* Dashboard Layout */
 .dashboard {
   min-height: 100vh;
@@ -171,20 +184,19 @@
 .search-input {
   width: 100%;
   padding: var(--space-3) var(--space-4) var(--space-3) var(--space-10);
-  background: var(--bg-card);
+  background: #ffffff;
   border: 1px solid var(--border);
   border-radius: var(--radius-full);
   color: var(--text-primary);
   font-size: var(--text-sm);
-  transition: all var(--transition-normal);
-  backdrop-filter: blur(10px);
+  transition: border-color var(--transition-normal), box-shadow var(--transition-normal);
 }
 
 .search-input:focus {
   outline: none;
   border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
-  background: var(--bg-card-hover);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  background: #ffffff;
 }
 
 .search-input::placeholder {
@@ -1053,21 +1065,20 @@
 .form-group select {
   width: 100%;
   padding: var(--space-3) var(--space-4);
-  background: var(--bg-card);
+  background: #ffffff;
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   color: var(--text-primary);
   font-size: var(--text-sm);
-  transition: all var(--transition-normal);
-  backdrop-filter: blur(10px);
+  transition: border-color var(--transition-normal), box-shadow var(--transition-normal);
 }
 
 .form-group input:focus,
 .form-group select:focus {
   outline: none;
   border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
-  background: var(--bg-card-hover);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  background: #ffffff;
 }
 
 .form-group input::placeholder {
