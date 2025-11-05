@@ -244,6 +244,10 @@ body {
   align-items: center;
   justify-content: center;
   padding: var(--space-8) var(--space-4);
+  background:
+    radial-gradient(900px 500px at 15% 10%, rgba(139, 92, 246, 0.35) 0%, transparent 60%),
+    radial-gradient(700px 400px at 85% 30%, rgba(34, 211, 238, 0.25) 0%, transparent 60%),
+    var(--bg-primary);
 }
 
 .login-wrapper {
@@ -586,7 +590,7 @@ body {
   justify-content: center;
   gap: var(--space-2);
   padding: var(--space-4) var(--space-6);
-  border-radius: var(--radius-xl);
+  border-radius: 9999px;
   font-weight: var(--font-semibold);
   font-size: var(--text-base);
   cursor: pointer;
@@ -617,13 +621,12 @@ body {
 .btn-primary {
   background: var(--gradient-primary);
   color: white;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 10px 24px rgba(139, 92, 246, 0.35);
 }
 
 .btn-primary:hover {
-  transform: translateY(-1px);
-  box-shadow: var(--shadow-md);
-  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 16px 30px rgba(139, 92, 246, 0.45);
 }
 
 .btn-secondary {

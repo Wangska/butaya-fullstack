@@ -14,7 +14,7 @@
         <div class="nav-container">
             <div class="nav-logo">
                 <div class="logo-icon">
-                    <i class="fas fa-calculator"></i>
+                    <i class="fas fa-piggy-bank"></i>
                 </div>
                 <span>BillSplit</span>
             </div>
@@ -281,7 +281,7 @@
                 <div class="footer-brand">
                     <div class="footer-logo">
                         <div class="logo-icon">
-                            <i class="fas fa-calculator"></i>
+                            <i class="fas fa-piggy-bank"></i>
                         </div>
                         <span>BillSplit</span>
                     </div>
