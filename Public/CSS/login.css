@@ -15,7 +15,7 @@
   --primary-light: #3b82f6;
 }
 
-/* Login Page Layout - light minimalist */
+/* Login Page Layout - warm violet, single-column card */
 body {
   min-height: 100vh;
   background: var(--bg-primary);
@@ -248,11 +248,11 @@ body {
 
 .login-wrapper {
   width: 100%;
-  max-width: 1000px;
+  max-width: 560px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  border-radius: var(--radius-2xl);
-  box-shadow: var(--shadow-lg);
+  grid-template-columns: 1fr;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
   overflow: hidden;
   background: #ffffff;
   border: 1px solid var(--border);
@@ -271,13 +271,7 @@ body {
 }
 
 /* Visual Section */
-.visual-section {
-  background: #f8fafc;
-  padding: var(--space-12);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+.visual-section { display: none; }
 
 .visual-section::before {
   content: '';
@@ -388,7 +382,7 @@ body {
 
 /* Form Section */
 .form-section {
-  padding: var(--space-12);
+  padding: var(--space-8);
   background: #ffffff;
   display: flex;
   align-items: center;
@@ -397,7 +391,7 @@ body {
 
 .form-container {
   width: 100%;
-  max-width: 400px;
+  max-width: 100%;
   position: relative;
 }
 
@@ -621,7 +615,7 @@ body {
 }
 
 .btn-primary {
-  background: var(--primary);
+  background: var(--gradient-primary);
   color: white;
   box-shadow: var(--shadow-sm);
 }
