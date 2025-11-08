@@ -6,7 +6,7 @@
     <title>BillSplit - Smart Bill Management</title>
     <link rel="stylesheet" href="Public/CSS/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
@@ -14,7 +14,7 @@
         <div class="nav-container">
             <div class="nav-logo">
                 <div class="logo-icon">
-                    <i class="fas fa-piggy-bank"></i>
+                    <i class="fas fa-receipt"></i>
                 </div>
                 <span>BillSplit</span>
             </div>
@@ -36,32 +36,31 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-background">
-            <div class="gradient-orb orb-1"></div>
-            <div class="gradient-orb orb-2"></div>
-            <div class="gradient-orb orb-3"></div>
+            <div class="geometric-shape shape-1"></div>
+            <div class="geometric-shape shape-2"></div>
+            <div class="geometric-shape shape-3"></div>
         </div>
         <div class="hero-container">
             <div class="hero-content">
                 <div class="hero-badge">
-                    <i class="fas fa-shield-alt"></i>
+                    <span class="badge-dot"></span>
                     <span>Trusted by 10,000+ users worldwide</span>
                 </div>
                 <h1 class="hero-title">
-                    Settle Shared Expenses
-                    <br><span class="gradient-text">Fast. Fair. Together.</span>
+                    Split Bills
+                    <br><span class="gradient-text">Without The Drama</span>
                 </h1>
                 <p class="hero-description">
-                    Split smarter, stay closer. BillSplit makes sharing expenses effortless,
-                    transparent, and fair—so you can focus on the moments, not the math.
+                    The smartest way to split expenses with friends, roommates, and groups. 
+                    No awkward conversations, no complicated math—just fair, fast, and simple.
                 </p>
                 <div class="hero-actions">
                     <a href="View/register.html" class="btn-primary">
-                        <i class="fas fa-rocket"></i>
-                        Start Free Trial
+                        Get Started Free
+                        <i class="fas fa-arrow-right"></i>
                     </a>
                     <a href="View/login.html" class="btn-secondary">
-                        <i class="fas fa-play"></i>
-                        Watch Demo
+                        Sign In
                     </a>
                 </div>
                 <div class="hero-stats">
@@ -71,7 +70,7 @@
                     </div>
                     <div class="stat">
                         <span class="stat-number">10K+</span>
-                        <span class="stat-label">Happy Users</span>
+                        <span class="stat-label">Active Users</span>
                     </div>
                     <div class="stat">
                         <span class="stat-number">99%</span>
@@ -80,56 +79,30 @@
                 </div>
             </div>
             <div class="hero-visual">
-                <div class="phone-mockup">
-                    <div class="phone-screen">
-                        <div class="app-header">
-                            <div class="app-title">Recent Bills</div>
-                            <div class="app-balance">+$127.50</div>
+                <div class="dashboard-preview">
+                    <div class="preview-card card-1">
+                        <div class="card-header-preview">
+                            <i class="fas fa-users"></i>
+                            <span>Roommates</span>
                         </div>
-                        <div class="bill-item">
-                            <div class="bill-icon">
-                                <i class="fas fa-utensils"></i>
-                            </div>
-                            <div class="bill-details">
-                                <div class="bill-name">Dinner at Mario's</div>
-                                <div class="bill-meta">You owe $15.50</div>
-                            </div>
-                            <div class="bill-amount">$45.50</div>
-                        </div>
-                        <div class="bill-item">
-                            <div class="bill-icon">
-                                <i class="fas fa-car"></i>
-                            </div>
-                            <div class="bill-details">
-                                <div class="bill-name">Gas Station</div>
-                                <div class="bill-meta">You paid $23.00</div>
-                            </div>
-                            <div class="bill-amount">$23.00</div>
-                        </div>
-                        <div class="bill-item">
-                            <div class="bill-icon">
-                                <i class="fas fa-shopping-cart"></i>
-                            </div>
-                            <div class="bill-details">
-                                <div class="bill-name">Grocery Shopping</div>
-                                <div class="bill-meta">Split equally</div>
-                            </div>
-                            <div class="bill-amount">$89.75</div>
-                        </div>
+                        <div class="card-amount">$450.00</div>
+                        <div class="card-meta">3 members</div>
                     </div>
-                </div>
-                <div class="floating-elements">
-                    <div class="floating-card card-1">
-                        <i class="fas fa-users"></i>
-                        <span>Group</span>
+                    <div class="preview-card card-2">
+                        <div class="card-header-preview">
+                            <i class="fas fa-utensils"></i>
+                            <span>Dinner</span>
+                        </div>
+                        <div class="card-amount">$127.50</div>
+                        <div class="card-meta">Split equally</div>
                     </div>
-                    <div class="floating-card card-2">
-                        <i class="fas fa-chart-pie"></i>
-                        <span>Analytics</span>
-                    </div>
-                    <div class="floating-card card-3">
-                        <i class="fas fa-mobile-alt"></i>
-                        <span>Mobile</span>
+                    <div class="preview-card card-3">
+                        <div class="card-header-preview">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>Groceries</span>
+                        </div>
+                        <div class="card-amount">$89.75</div>
+                        <div class="card-meta">You owe $22.44</div>
                     </div>
                 </div>
             </div>

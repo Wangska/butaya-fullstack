@@ -4,29 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign In - BillSplit</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../Public/CSS/login.css">
 </head>
 <body>
     <!-- Animated Background -->
     <div class="background-animation">
-        <div class="floating-elements">
-            <div class="floating-shape shape-1"></div>
-            <div class="floating-shape shape-2"></div>
-            <div class="floating-shape shape-3"></div>
-            <div class="floating-shape shape-4"></div>
-            <div class="floating-shape shape-5"></div>
-            <div class="floating-shape shape-6"></div>
-        </div>
-        <div class="gradient-overlay"></div>
-        <div class="particle-container">
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
+        <div class="geometric-bg">
+            <div class="bg-shape shape-1"></div>
+            <div class="bg-shape shape-2"></div>
+            <div class="bg-shape shape-3"></div>
         </div>
     </div>
 
@@ -35,7 +23,7 @@
         <div class="nav-container">
             <div class="nav-brand">
                 <div class="brand-icon">
-                    <i class="fas fa-piggy-bank"></i>
+                    <i class="fas fa-receipt"></i>
                 </div>
                 <span class="brand-text">BillSplit</span>
             </div>
@@ -55,89 +43,44 @@
     <!-- Main Container -->
     <div class="login-container">
         <div class="login-wrapper">
-            <!-- Left Side - Visual Content -->
-            <div class="visual-section">
-                <div class="visual-content">
-                    <div class="welcome-message">
-                        <h1 class="welcome-title">Welcome Back!</h1>
-                        <p class="welcome-description">
-                            Sign in to continue managing your shared expenses and bills with friends and family.
-                        </p>
+            <!-- Left Side - Branding -->
+            <div class="branding-section">
+                <div class="branding-content">
+                    <div class="brand-logo">
+                        <div class="logo-large">
+                            <i class="fas fa-receipt"></i>
+                        </div>
+                        <h1>BillSplit</h1>
                     </div>
-                    
-                    <div class="features-grid">
-                        <div class="feature-card">
-                            <div class="feature-icon">
-                                <i class="fas fa-shield-alt"></i>
-                            </div>
-                            <div class="feature-content">
-                                <h3>Bank-Level Security</h3>
-                                <p>Your data is encrypted and secure</p>
-                            </div>
+                    <h2 class="branding-title">Welcome Back!</h2>
+                    <p class="branding-description">
+                        Sign in to manage your shared expenses and split bills effortlessly with friends and family.
+                    </p>
+                    <div class="branding-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Secure & Encrypted</span>
                         </div>
-                        
-                        <div class="feature-card">
-                            <div class="feature-icon">
-                                <i class="fas fa-mobile-alt"></i>
-                            </div>
-                            <div class="feature-content">
-                                <h3>Mobile Optimized</h3>
-                                <p>Works perfectly on all devices</p>
-                            </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Real-time Sync</span>
                         </div>
-                        
-                        <div class="feature-card">
-                            <div class="feature-icon">
-                                <i class="fas fa-users"></i>
-                            </div>
-                            <div class="feature-content">
-                                <h3>Smart Groups</h3>
-                                <p>Manage multiple expense groups</p>
-                            </div>
-                        </div>
-                        
-                        <div class="feature-card">
-                            <div class="feature-icon">
-                                <i class="fas fa-chart-pie"></i>
-                            </div>
-                            <div class="feature-content">
-                                <h3>Analytics</h3>
-                                <p>Track spending patterns</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="stats-section">
-                        <div class="stat-item">
-                            <div class="stat-number">10K+</div>
-                            <div class="stat-label">Active Users</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">50K+</div>
-                            <div class="stat-label">Bills Split</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">99.9%</div>
-                            <div class="stat-label">Uptime</div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Unlimited Groups</span>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Right Side - Forms -->
+            <!-- Right Side - Form -->
             <div class="form-section">
                 <div class="form-container">
                     <!-- Login Form -->
                     <div class="form-wrapper" id="loginFormContainer">
                         <div class="form-header">
-                            <div class="form-logo">
-                                <div class="logo-icon">
-                                    <i class="fas fa-piggy-bank"></i>
-                                </div>
-                                <span>BillSplit</span>
-                            </div>
-                            <h2 class="form-title">Sign In to Your Account</h2>
-                            <p class="form-subtitle">Enter your credentials to access your dashboard</p>
+                            <h2 class="form-title">Sign In</h2>
+                            <p class="form-subtitle">Enter your credentials to continue</p>
                         </div>
                         
                         <div class="message" id="loginMessage"></div>
@@ -166,38 +109,34 @@
                                 <label class="checkbox-wrapper">
                                     <input type="checkbox" id="rememberMe">
                                     <span class="checkmark"></span>
-                                    Remember me for 30 days
+                                    Remember me
                                 </label>
                                 <a href="#" class="forgot-link">Forgot Password?</a>
                             </div>
                             
                             <button type="submit" class="btn btn-primary">
-                                <i class="fas fa-sign-in-alt"></i>
-                                Sign In
+                                <span>Sign In</span>
+                                <i class="fas fa-arrow-right"></i>
                             </button>
                         </form>
                         
                         <div class="divider">
-                            <span>or continue with</span>
+                            <span>or</span>
                         </div>
                         
                         <div class="social-login">
                             <button type="button" class="social-btn google">
                                 <i class="fab fa-google"></i>
-                                Google
+                                <span>Google</span>
                             </button>
                             <button type="button" class="social-btn facebook">
                                 <i class="fab fa-facebook-f"></i>
-                                Facebook
+                                <span>Facebook</span>
                             </button>
                         </div>
                         
                         <div class="form-footer">
-                            <button type="button" class="btn btn-secondary" onclick="location.href='register.html'">
-                                <i class="fas fa-user-plus"></i>
-                                Create New Account
-                            </button>
-                            
+                            <p>Don't have an account? <a href="register.html" class="register-link">Sign Up</a></p>
                             <button type="button" class="btn btn-guest" id="showGuestForm">
                                 <i class="fas fa-user-friends"></i>
                                 Continue as Guest
@@ -208,14 +147,8 @@
                     <!-- Guest Form -->
                     <div class="form-wrapper hidden" id="guestFormContainer">
                         <div class="form-header">
-                            <div class="form-logo">
-                                <div class="logo-icon">
-                                    <i class="fas fa-piggy-bank"></i>
-                                </div>
-                                <span>BillSplit</span>
-                            </div>
                             <h2 class="form-title">Join as Guest</h2>
-                            <p class="form-subtitle">Enter your details to join a group without creating an account</p>
+                            <p class="form-subtitle">Enter your details to join a group</p>
                         </div>
                         
                         <div class="message" id="guestMessage"></div>
@@ -226,7 +159,7 @@
                                     <label for="guestFirstName">First Name</label>
                                     <div class="input-wrapper">
                                         <i class="fas fa-user input-icon"></i>
-                                        <input type="text" id="guestFirstName" name="first_name" placeholder="Enter your first name" required>
+                                        <input type="text" id="guestFirstName" name="first_name" placeholder="First name" required>
                                     </div>
                                 </div>
                                 
@@ -234,7 +167,7 @@
                                     <label for="guestLastName">Last Name</label>
                                     <div class="input-wrapper">
                                         <i class="fas fa-user input-icon"></i>
-                                        <input type="text" id="guestLastName" name="last_name" placeholder="Enter your last name" required>
+                                        <input type="text" id="guestLastName" name="last_name" placeholder="Last name" required>
                                     </div>
                                 </div>
                             </div>
@@ -243,7 +176,7 @@
                                 <label for="guestEmail">Email Address</label>
                                 <div class="input-wrapper">
                                     <i class="fas fa-envelope input-icon"></i>
-                                    <input type="email" id="guestEmail" name="email" placeholder="Enter your email address" required>
+                                    <input type="email" id="guestEmail" name="email" placeholder="Enter your email" required>
                                 </div>
                             </div>
                             
@@ -251,13 +184,13 @@
                                 <label for="guestBillCode">Group Code</label>
                                 <div class="input-wrapper">
                                     <i class="fas fa-key input-icon"></i>
-                                    <input type="text" id="guestBillCode" name="bill_code" placeholder="Enter the group code" required>
+                                    <input type="text" id="guestBillCode" name="bill_code" placeholder="Enter group code" required>
                                 </div>
                             </div>
                             
                             <button type="submit" class="btn btn-primary">
+                                <span>Join Group</span>
                                 <i class="fas fa-arrow-right"></i>
-                                Join Group
                             </button>
                         </form>
                         
