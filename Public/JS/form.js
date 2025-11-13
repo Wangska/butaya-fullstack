@@ -124,20 +124,47 @@ function getButtonText(formType) {
 function initFormSwitching() {
     const showGuestForm = document.getElementById('showGuestForm');
     const showLoginForm = document.getElementById('showLoginForm');
+    const focusLogin = document.getElementById('focusLogin');
     const loginFormContainer = document.getElementById('loginFormContainer');
     const guestFormContainer = document.getElementById('guestFormContainer');
 
-    if (showGuestForm && showLoginForm && loginFormContainer && guestFormContainer) {
-        showGuestForm.addEventListener('click', function(e) {
-            e.preventDefault();
+    if (!loginFormContainer || !guestFormContainer) return;
+
+    const updateView = (target) => {
+        if (target === 'guest') {
             loginFormContainer.classList.add('hidden');
             guestFormContainer.classList.remove('hidden');
-        });
-
-        showLoginForm.addEventListener('click', function(e) {
-            e.preventDefault();
+        } else {
             guestFormContainer.classList.add('hidden');
             loginFormContainer.classList.remove('hidden');
+        }
+
+        [focusLogin, showGuestForm].forEach((button) => {
+            if (!button) return;
+            button.classList.toggle('is-active', (button === focusLogin && target !== 'guest') || (button === showGuestForm && target === 'guest'));
+        });
+    };
+
+    if (showGuestForm) {
+        showGuestForm.addEventListener('click', (e) => {
+            e.preventDefault();
+            updateView('guest');
         });
     }
+
+    if (showLoginForm) {
+        showLoginForm.addEventListener('click', (e) => {
+            e.preventDefault();
+            updateView('login');
+        });
+    }
+
+    if (focusLogin) {
+        focusLogin.addEventListener('click', (e) => {
+            e.preventDefault();
+            updateView('login');
+        });
+    }
+
+    updateView('login');
 }
